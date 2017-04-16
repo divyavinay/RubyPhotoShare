@@ -2,6 +2,7 @@
 <%= image_tag("/assets/#{@user_photo.file_name}", alt: "photos") %>
 <p> Created on:<%= @user_photo.date_time %> </p>
 <ul>
+  <li id="Comment"><b> Comments: </b> </li>
   <% @comments.each do |comment| %>
       <li>
         <div class="panel panel-default">
@@ -13,5 +14,7 @@
       </li>
   <% end %>
 </ul>
+
+<%= link_to 'Back', photo_path(@user_photo.user_id) %>
 
 
