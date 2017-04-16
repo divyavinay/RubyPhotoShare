@@ -1,23 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1> Photos of <%= @userView.first_name %></h1>
-<ul>
-  <% @photos.each do |photo| %>
-  <li>
-    <%= image_tag("/assets/#{photo.file_name}", alt: "photos") %>
-  </li>
-      <li>
-        <p> Created on: <%= photo.date_time %></p>
-      </li>
-      <li>
-        <ul>
-          <% @comments = photo.comments %>
-          <% @comments.each do |comment| %>
-              <li> <p> <%= comment.comment_text %> </p></li>
-          <% end %>
-        </ul>
-      </li>
-      <% end %>
-</ul>
+<h1 id="photoShareHeader"> Photos of <%= @userView.first_name %></h1>
 
-<%= link_to 'Back', photos_path %>
+    <div class="row">
+      <% @photos.each do |photo| %>
+      <div class="col-xs-6 col-md-3">
+        <a href="<%= display_photo_url(photo) %>" class="thumbnail">
+          <%= image_tag("/assets/#{photo.file_name}", alt: "photos") %>
+        </a>
+      </div>
+      <% end %>
+    </div>
+
+
+<%= link_to 'Back', users_path %>

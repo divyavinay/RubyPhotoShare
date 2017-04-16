@@ -1,35 +1,3 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<h1>Photos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Date time</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= photo.date_time %></td>
-        <td><%= photo.user %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<h1>Display page</h1>

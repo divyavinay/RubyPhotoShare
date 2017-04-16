@@ -4,20 +4,20 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @user = User.all
-    redirect_to(users_path)
   end
 
   # GET /photos/1
   # GET /photos/1.json
   def show
    @userView = User.find(params[:id])
-    @photos = @userView.photos
-=begin
-    @photos.each do |photo|
-      @comments = Comment.where(photo_id: photo)
-    end
-=end
+   @photos = @userView.photos
+
+  end
+
+  def display
+    @user_id = params[:id]
+    @user_photo = Photo.find(params[:id])
+    @comments = @user_photo.comments
   end
 
   private

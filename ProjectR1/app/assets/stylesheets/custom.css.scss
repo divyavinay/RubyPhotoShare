@@ -1,0 +1,23 @@
+$navbar-default-bg: #494949;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#photoShareHeader {
+  font-family: "Bradley Hand ITC";
+  font-weight: bold;
+}

@@ -1,0 +1,17 @@
+
+<%= image_tag("/assets/#{@user_photo.file_name}", alt: "photos") %>
+<p> Created on:<%= @user_photo.date_time %> </p>
+<ul>
+  <% @comments.each do |comment| %>
+      <li>
+        <div class="panel panel-default">
+          <div class="panel-heading"><b><%= comment.user.first_name %> <%=comment.user.last_name %>:</b></div>
+           <div class="panel-body">
+              <%= comment.comment_text %>
+           </div>
+        </div>
+      </li>
+  <% end %>
+</ul>
+
+
