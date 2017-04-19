@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/index',to:'users#index'
   resources :photos do
   member do
     get 'display',controller:'photos',action:'display',to_param:[:photo_id]
